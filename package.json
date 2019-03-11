@@ -1,0 +1,9 @@
+{
+  "name": "demo-electron-typescript-react-typeorm",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/senorihl/demo-electron-typescript-react-typeorm.git",
+  "author": "senorihl <senorihl@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
