@@ -1,9 +1,36 @@
 {
   "name": "demo-electron-typescript-react-typeorm",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "main.js",
   "repository": "https://github.com/senorihl/demo-electron-typescript-react-typeorm.git",
   "author": "senorihl <senorihl@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "prestart": "NODE_ENV=production webpack",
+    "start": "electron .",
+    "dev": "NODE_ENV=development concurrently 'sleep 1 && yarn run dev:electron' 'yarn run dev:webpack'",
+    "dev:electron": "electron .",
+    "dev:webpack": "webpack-dev-server"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "reflect-metadata": "^0.1.13",
+    "sql.js": "^0.5.0",
+    "typeorm": "^0.2.14"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.7",
+    "@types/react-dom": "^16.8.2",
+    "concurrently": "^4.1.0",
+    "electron": "^4.0.8",
+    "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
 }
